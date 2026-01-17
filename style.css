@@ -333,6 +333,34 @@ body {
     color: var(--color-white);
 }
 
+.footer-credits {
+    margin-top: 12px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.footer-credits a {
+    color: var(--color-gray-300);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-credits a:hover {
+    color: var(--color-white);
+}
+
+.footer-separator {
+    color: var(--color-gray-600);
+}
+
+.footer-credits i {
+    color: #5865F2;
+}
+
 @media (max-width: 800px) {
     .editor-grid {
         grid-template-columns: 1fr;
