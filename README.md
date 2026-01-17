@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://freeyamp.github.io/images/yamp_transperent.png" alt="FREE YAMP Preview" width="400">
+  <img src="https://freeyamp.github.io/images/yamp_transperent.png" alt="FREE YAMP Preview" width="200">
 </p>
 
 ---
