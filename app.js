@@ -14,7 +14,15 @@ const translations = {
         download: "Download",
         preview: "Preview",
         footerText: "Made with love for the YAMP community",
-        developedBy: "Developed by"
+        developedBy: "Developed by",
+        aboutProject: "About This Project",
+        infoTitle: "What is YAMP?",
+        infoDesc1: "Yet Another M Platform (YAMP) is an independent, nonprofit, third-party modding project focused on delivering high-quality multiplayer experiences driven by its community.",
+        infoDesc2: "Recently, the YAMP team received a formal Cease & Desist notice from Take-Two Interactive. Following this, the project's developers decided to temporarily pause development while engaging in good-faith communication to seek clarification and explore a possible resolution.",
+        infoDesc3: "Throughout its existence, YAMP has remained free and non-commercial, with no monetization or donation systems. The team has consistently emphasized transparency and community-driven development.",
+        infoWhyTitle: "Why #FREEYAMP?",
+        infoWhyDesc: "This tool was created as a community support and awareness initiative. Its sole purpose is to allow supporters to add a #FREEYAMP overlay to images in order to express solidarity with the YAMP community and highlight the importance of open dialogue around modding, creativity, and community-driven projects.",
+        infoDisclaimer: "This repository is not affiliated with Take-Two Interactive or Rockstar Games, and it does not host, distribute, or modify any game files. It is a fan-made, informational tool created to support community expression."
     },
     de: {
         subtitle: "Fügen Sie #FREEYAMP zu Ihren Bildern hinzu, um Ihre Unterstützung zu zeigen!",
@@ -31,7 +39,15 @@ const translations = {
         download: "Herunterladen",
         preview: "Vorschau",
         footerText: "Mit Liebe für die YAMP-Community gemacht",
-        developedBy: "Entwickelt von"
+        developedBy: "Entwickelt von",
+        aboutProject: "Über dieses Projekt",
+        infoTitle: "Was ist YAMP?",
+        infoDesc1: "Yet Another M Platform (YAMP) ist ein unabhängiges, gemeinnütziges Modding-Projekt, das sich auf hochwertige Multiplayer-Erlebnisse konzentriert, die von der Community vorangetrieben werden.",
+        infoDesc2: "Kürzlich erhielt das YAMP-Team eine formelle Unterlassungserklärung von Take-Two Interactive. Daraufhin beschlossen die Entwickler, die Entwicklung vorübergehend zu pausieren und in gutem Glauben nach einer Klärung und möglichen Lösung zu suchen.",
+        infoDesc3: "Während seiner gesamten Existenz blieb YAMP kostenlos und nicht-kommerziell, ohne Monetarisierung oder Spendensysteme. Das Team hat stets Transparenz und Community-getriebene Entwicklung betont.",
+        infoWhyTitle: "Warum #FREEYAMP?",
+        infoWhyDesc: "Dieses Tool wurde als Community-Unterstützungs- und Sensibilisierungsinitiative erstellt. Sein einziger Zweck ist es, Unterstützern zu ermöglichen, ein #FREEYAMP-Overlay zu Bildern hinzuzufügen, um Solidarität mit der YAMP-Community auszudrücken.",
+        infoDisclaimer: "Dieses Repository ist nicht mit Take-Two Interactive oder Rockstar Games verbunden und hostet, verteilt oder modifiziert keine Spieldateien. Es ist ein von Fans erstelltes, informatives Tool zur Unterstützung der Community-Expression."
     },
     tr: {
         subtitle: "Resimlerinize #FREEYAMP ekleyin, desteğinizi gösterin!",
@@ -48,7 +64,15 @@ const translations = {
         download: "İndir",
         preview: "Önizleme",
         footerText: "YAMP topluluğu için sevgiyle yapılmıştır",
-        developedBy: "Geliştirici"
+        developedBy: "Geliştirici",
+        aboutProject: "Bu Proje Hakkında",
+        infoTitle: "YAMP Nedir?",
+        infoDesc1: "Yet Another M Platform (YAMP), topluluk tarafından yönlendirilen yüksek kaliteli çok oyunculu deneyimler sunmaya odaklanan bağımsız, kâr amacı gütmeyen bir modding projesidir.",
+        infoDesc2: "Son zamanlarda YAMP ekibi, Take-Two Interactive'den resmi bir Durdurma ve Vazgeçme bildirimi aldı. Bunun üzerine geliştiriciler, açıklama aramak ve olası bir çözümü keşfetmek için iyi niyetli iletişime geçerken geliştirmeyi geçici olarak durdurma kararı aldı.",
+        infoDesc3: "YAMP, varlığı boyunca ücretsiz ve ticari olmayan kalmış, hiçbir para kazanma veya bağış sistemi olmamıştır. Ekip her zaman şeffaflığı ve topluluk odaklı geliştirmeyi vurgulamıştır.",
+        infoWhyTitle: "Neden #FREEYAMP?",
+        infoWhyDesc: "Bu araç, bir topluluk desteği ve farkındalık girişimi olarak oluşturuldu. Tek amacı, destekleyicilerin YAMP topluluğuyla dayanışmayı ifade etmek için görüntulerine #FREEYAMP eklemelerine olanak tanımaktır.",
+        infoDisclaimer: "Bu depo Take-Two Interactive veya Rockstar Games ile bağlantılı değildir ve hiçbir oyun dosyasını barındırmaz, dağıtmaz veya değiştirmez. Topluluk ifadesini desteklemek için oluşturulmuş hayran yapımı bir araçtır."
     },
     fr: {
         subtitle: "Ajoutez #FREEYAMP à vos images pour montrer votre soutien!",
@@ -65,7 +89,15 @@ const translations = {
         download: "Télécharger",
         preview: "Aperçu",
         footerText: "Fait avec amour pour la communauté YAMP",
-        developedBy: "Développé par"
+        developedBy: "Développé par",
+        aboutProject: "À propos de ce projet",
+        infoTitle: "Qu'est-ce que YAMP?",
+        infoDesc1: "Yet Another M Platform (YAMP) est un projet de modding indépendant et à but non lucratif axé sur des expériences multijoueurs de haute qualité dirigées par sa communauté.",
+        infoDesc2: "Récemment, l'équipe YAMP a reçu un avis formel de cessation de Take-Two Interactive. Suite à cela, les développeurs ont décidé de suspendre temporairement le développement tout en engageant une communication de bonne foi.",
+        infoDesc3: "Tout au long de son existence, YAMP est resté gratuit et non commercial, sans système de monétisation ou de don. L'équipe a toujours mis l'accent sur la transparence et le développement axé sur la communauté.",
+        infoWhyTitle: "Pourquoi #FREEYAMP?",
+        infoWhyDesc: "Cet outil a été créé comme une initiative de soutien et de sensibilisation communautaire. Son seul but est de permettre aux supporters d'ajouter un overlay #FREEYAMP aux images pour exprimer leur solidarité avec la communauté YAMP.",
+        infoDisclaimer: "Ce dépôt n'est pas affilié à Take-Two Interactive ou Rockstar Games, et il n'héberge, ne distribue ni ne modifie aucun fichier de jeu. C'est un outil créé par des fans pour soutenir l'expression communautaire."
     }
 };
 
@@ -116,6 +148,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     languageSelect.addEventListener('change', function () {
         setLanguage(this.value);
+    });
+
+    const infoToggle = document.getElementById('infoToggle');
+    const infoContent = document.getElementById('infoContent');
+    infoToggle.addEventListener('click', function () {
+        this.classList.toggle('active');
+        infoContent.classList.toggle('active');
     });
 
     uploadArea.addEventListener('click', function () {
