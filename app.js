@@ -1,3 +1,86 @@
+const translations = {
+    en: {
+        subtitle: "Add #FREEYAMP to your images to show your support!",
+        uploadImage: "Upload Image",
+        uploadText: "Drag image here or click to select",
+        uploadHint: "PNG, JPG, GIF supported",
+        settings: "Settings",
+        textColor: "Text Color",
+        bgColor: "Background Color",
+        bgOpacity: "Background Opacity",
+        overlayOpacity: "Text/Logo Opacity",
+        overlaySize: "Text/Logo Size",
+        changeImage: "Change Image",
+        download: "Download",
+        preview: "Preview",
+        footerText: "Made for the YAMP community"
+    },
+    de: {
+        subtitle: "Fügen Sie #FREEYAMP zu Ihren Bildern hinzu, um Ihre Unterstützung zu zeigen!",
+        uploadImage: "Bild Hochladen",
+        uploadText: "Bild hierher ziehen oder klicken zum Auswählen",
+        uploadHint: "PNG, JPG, GIF unterstützt",
+        settings: "Einstellungen",
+        textColor: "Textfarbe",
+        bgColor: "Hintergrundfarbe",
+        bgOpacity: "Hintergrund-Deckkraft",
+        overlayOpacity: "Text/Logo-Deckkraft",
+        overlaySize: "Text/Logo-Größe",
+        changeImage: "Bild Ändern",
+        download: "Herunterladen",
+        preview: "Vorschau",
+        footerText: "Für die YAMP-Community gemacht"
+    },
+    tr: {
+        subtitle: "Resimlerinize #FREEYAMP ekleyin, desteğinizi gösterin!",
+        uploadImage: "Resim Yükle",
+        uploadText: "Resmi buraya sürükleyin veya seçmek için tıklayın",
+        uploadHint: "PNG, JPG, GIF desteklenir",
+        settings: "Ayarlar",
+        textColor: "Yazı Rengi",
+        bgColor: "Arka Plan Rengi",
+        bgOpacity: "Arka Plan Şeffaflığı",
+        overlayOpacity: "Yazı/Logo Şeffaflığı",
+        overlaySize: "Yazı/Logo Boyutu",
+        changeImage: "Resmi Değiştir",
+        download: "İndir",
+        preview: "Önizleme",
+        footerText: "YAMP topluluğu için yapılmıştır"
+    },
+    fr: {
+        subtitle: "Ajoutez #FREEYAMP à vos images pour montrer votre soutien!",
+        uploadImage: "Télécharger l'Image",
+        uploadText: "Faites glisser l'image ici ou cliquez pour sélectionner",
+        uploadHint: "PNG, JPG, GIF pris en charge",
+        settings: "Paramètres",
+        textColor: "Couleur du Texte",
+        bgColor: "Couleur de Fond",
+        bgOpacity: "Opacité du Fond",
+        overlayOpacity: "Opacité Texte/Logo",
+        overlaySize: "Taille Texte/Logo",
+        changeImage: "Changer l'Image",
+        download: "Télécharger",
+        preview: "Aperçu",
+        footerText: "Fait pour la communauté YAMP"
+    }
+};
+
+let currentLanguage = localStorage.getItem('freeyamp_lang') || 'en';
+
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('freeyamp_lang', lang);
+    document.documentElement.lang = lang;
+
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const uploadSection = document.getElementById('uploadSection');
     const editorSection = document.getElementById('editorSection');
@@ -10,8 +93,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const bgColorInput = document.getElementById('bgColor');
     const bgOpacityInput = document.getElementById('bgOpacity');
     const overlayOpacityInput = document.getElementById('overlayOpacity');
+    const overlaySizeInput = document.getElementById('overlaySize');
     const bgOpacityValue = document.getElementById('bgOpacityValue');
     const overlayOpacityValue = document.getElementById('overlayOpacityValue');
+    const overlaySizeValue = document.getElementById('overlaySizeValue');
+    const languageSelect = document.getElementById('languageSelect');
 
     const ctx = previewCanvas.getContext('2d');
     let uploadedImage = null;
@@ -20,6 +106,13 @@ document.addEventListener('DOMContentLoaded', function () {
     yampLogo = new Image();
     yampLogo.crossOrigin = 'anonymous';
     yampLogo.src = './images/yamp_transperent.png';
+
+    languageSelect.value = currentLanguage;
+    setLanguage(currentLanguage);
+
+    languageSelect.addEventListener('change', function () {
+        setLanguage(this.value);
+    });
 
     uploadArea.addEventListener('click', function () {
         fileInput.click();
@@ -81,6 +174,11 @@ document.addEventListener('DOMContentLoaded', function () {
         generateOverlay();
     });
 
+    overlaySizeInput.addEventListener('input', function () {
+        overlaySizeValue.textContent = this.value + '%';
+        generateOverlay();
+    });
+
     textColorInput.addEventListener('input', function () {
         generateOverlay();
     });
@@ -100,11 +198,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const bgColor = bgColorInput.value;
         const bgOpacity = bgOpacityInput.value / 100;
         const overlayOpacity = overlayOpacityInput.value / 100;
+        const sizeMultiplier = overlaySizeInput.value / 100;
 
         const centerX = previewCanvas.width / 2;
         const centerY = previewCanvas.height / 2;
 
-        const fontSize = Math.min(previewCanvas.width, previewCanvas.height) * 0.12;
+        const baseFontSize = Math.min(previewCanvas.width, previewCanvas.height) * 0.12;
+        const fontSize = baseFontSize * sizeMultiplier;
         ctx.font = 'bold ' + fontSize + 'px "Segoe UI", Tahoma, Geneva, Verdana, sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
