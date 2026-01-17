@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FREE YAMP - Image Generator</title>
     <meta name="description"
-        content="YAMP için destek göstermenin en kolay yolu. Resimlerinize #FREEYAMP ekleyin ve paylaşın!">
+        content="The easiest way to show support for YAMP. Add #FREEYAMP to your images and share!">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -14,10 +14,18 @@
 <body>
     <div class="container">
         <header class="header">
+            <div class="language-selector">
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
             <div class="header-content">
                 <img src="./images/yamp_transperent.png" alt="YAMP Logo" class="header-logo">
                 <h1 class="header-title">#FREEYAMP</h1>
-                <p class="header-subtitle">Resimlerinize #FREEYAMP ekleyin, desteğinizi gösterin!</p>
+                <p class="header-subtitle" data-i18n="subtitle">Add #FREEYAMP to your images to show your support!</p>
             </div>
         </header>
 
@@ -25,12 +33,12 @@
             <section class="upload-section" id="uploadSection">
                 <h2 class="section-title">
                     <i class="fas fa-image"></i>
-                    Resim Yükle
+                    <span data-i18n="uploadImage">Upload Image</span>
                 </h2>
                 <div class="upload-area" id="uploadArea">
                     <i class="fas fa-cloud-upload-alt upload-icon"></i>
-                    <p class="upload-text">Resmi buraya sürükleyin veya seçmek için tıklayın</p>
-                    <p class="upload-hint">PNG, JPG, GIF desteklenir</p>
+                    <p class="upload-text" data-i18n="uploadText">Drag image here or click to select</p>
+                    <p class="upload-hint" data-i18n="uploadHint">PNG, JPG, GIF supported</p>
                     <input type="file" id="fileInput" accept="image/*" hidden>
                 </div>
             </section>
@@ -40,27 +48,27 @@
                     <div class="settings-panel">
                         <h2 class="section-title">
                             <i class="fas fa-sliders-h"></i>
-                            Ayarlar
+                            <span data-i18n="settings">Settings</span>
                         </h2>
                         <div class="settings-list">
                             <div class="setting-item">
                                 <label for="textColor">
                                     <i class="fas fa-font"></i>
-                                    Yazı Rengi
+                                    <span data-i18n="textColor">Text Color</span>
                                 </label>
                                 <input type="color" id="textColor" value="#FFFFFF">
                             </div>
                             <div class="setting-item">
                                 <label for="bgColor">
                                     <i class="fas fa-square"></i>
-                                    Arka Plan Rengi
+                                    <span data-i18n="bgColor">Background Color</span>
                                 </label>
                                 <input type="color" id="bgColor" value="#000000">
                             </div>
                             <div class="setting-item">
                                 <label for="bgOpacity">
                                     <i class="fas fa-adjust"></i>
-                                    Arka Plan Şeffaflığı
+                                    <span data-i18n="bgOpacity">Background Opacity</span>
                                 </label>
                                 <input type="range" id="bgOpacity" min="0" max="100" value="50">
                                 <span id="bgOpacityValue">50%</span>
@@ -68,27 +76,35 @@
                             <div class="setting-item">
                                 <label for="overlayOpacity">
                                     <i class="fas fa-layer-group"></i>
-                                    Yazı/Logo Şeffaflığı
+                                    <span data-i18n="overlayOpacity">Text/Logo Opacity</span>
                                 </label>
                                 <input type="range" id="overlayOpacity" min="0" max="100" value="80">
                                 <span id="overlayOpacityValue">80%</span>
+                            </div>
+                            <div class="setting-item">
+                                <label for="overlaySize">
+                                    <i class="fas fa-expand"></i>
+                                    <span data-i18n="overlaySize">Text/Logo Size</span>
+                                </label>
+                                <input type="range" id="overlaySize" min="50" max="150" value="100">
+                                <span id="overlaySizeValue">100%</span>
                             </div>
                         </div>
                         <div class="action-buttons">
                             <button class="btn btn-secondary" id="changeImageBtn">
                                 <i class="fas fa-redo"></i>
-                                Resmi Değiştir
+                                <span data-i18n="changeImage">Change Image</span>
                             </button>
                             <button class="btn btn-primary" id="downloadBtn">
                                 <i class="fas fa-download"></i>
-                                İndir
+                                <span data-i18n="download">Download</span>
                             </button>
                         </div>
                     </div>
                     <div class="preview-panel">
                         <h2 class="section-title">
                             <i class="fas fa-eye"></i>
-                            Önizleme
+                            <span data-i18n="preview">Preview</span>
                         </h2>
                         <div class="preview-container">
                             <canvas id="previewCanvas"></canvas>
@@ -101,10 +117,10 @@
         <footer class="footer">
             <p>
                 <i class="fas fa-heart"></i>
-                YAMP topluluğu için yapılmıştır
+                <span data-i18n="footerText">Made for the YAMP community</span>
             </p>
             <p class="footer-links">
-                <a href="https://github.com" target="_blank" rel="noopener">
+                <a href="https://github.com/freeyamp/freeyamp.github.io/" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i>
                     GitHub
                 </a>
