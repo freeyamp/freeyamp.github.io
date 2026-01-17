@@ -1,4 +1,7 @@
 <h1 align="center">freeyamp.github.io</h1>
+<p align="center">
+  <img src="https://freeyamp.github.io/images/yamp_transperent.png" alt="FREE YAMP Preview" width="150">
+</p>
 
 <p align="center">
   A lightweight tool that adds a <b>FREEYAMP</b> overlay to images to raise awareness about the YAMP GTA V client and its copyright situation.
@@ -6,10 +9,6 @@
 
 <p align="center">
   Add <b>#FREEYAMP</b> overlay to your images and show your support for the YAMP community!
-</p>
-
-<p align="center">
-  <img src="https://freeyamp.github.io/images/yamp_transperent.png" alt="FREE YAMP Preview" width="200">
 </p>
 
 ---
