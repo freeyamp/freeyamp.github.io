@@ -13,7 +13,8 @@ const translations = {
         changeImage: "Change Image",
         download: "Download",
         preview: "Preview",
-        footerText: "Made with love for the YAMP community"
+        footerText: "Made with love for the YAMP community",
+        developedBy: "Developed by"
     },
     de: {
         subtitle: "Fügen Sie #FREEYAMP zu Ihren Bildern hinzu, um Ihre Unterstützung zu zeigen!",
@@ -29,7 +30,8 @@ const translations = {
         changeImage: "Bild Ändern",
         download: "Herunterladen",
         preview: "Vorschau",
-        footerText: "Mit Liebe für die YAMP-Community gemacht"
+        footerText: "Mit Liebe für die YAMP-Community gemacht",
+        developedBy: "Entwickelt von"
     },
     tr: {
         subtitle: "Resimlerinize #FREEYAMP ekleyin, desteğinizi gösterin!",
@@ -45,7 +47,8 @@ const translations = {
         changeImage: "Resmi Değiştir",
         download: "İndir",
         preview: "Önizleme",
-        footerText: "YAMP topluluğu için sevgiyle yapılmıştır"
+        footerText: "YAMP topluluğu için sevgiyle yapılmıştır",
+        developedBy: "Geliştirici"
     },
     fr: {
         subtitle: "Ajoutez #FREEYAMP à vos images pour montrer votre soutien!",
@@ -61,7 +64,8 @@ const translations = {
         changeImage: "Changer l'Image",
         download: "Télécharger",
         preview: "Aperçu",
-        footerText: "Fait avec amour pour la communauté YAMP"
+        footerText: "Fait avec amour pour la communauté YAMP",
+        developedBy: "Développé par"
     }
 };
 
@@ -247,4 +251,3 @@ document.addEventListener('DOMContentLoaded', function () {
         link.click();
     });
 });
-
